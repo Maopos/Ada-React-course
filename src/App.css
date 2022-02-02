@@ -1,38 +1,135 @@
-.App {
+body {
+  background: rgb(241, 241, 241);
+}
+
+.header {
+  width: 500px;
+  margin: 20px auto 5px;
+  background: rgb(0, 162, 255);
+  padding: 20px 0;
+  color: white;
+  font-weight: 200;
+  box-shadow: 2px 2px 20px #ccc;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.listado {
+  background: white;
+  width: 500px;
+  min-height: 600px;
+  margin: auto;
+  padding-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tarea {
+  background: rgb(247, 251, 255);
+  padding: 20px 10px 20px 20px;
+  margin: 10px 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-shadow: 2px 2px 2px #ccc;
+  justify-content: space-between;
+}
+
+.itemTarea {
+  display: flex;
+  padding-top: 5px;
+}
+
+.check {
+  margin-right: 20px;
+  height: 30px;
+}
+
+#add {
+  width: 50px;
+  position: absolute;
+  top: 35px;
+  right: 500px;
+  cursor: pointer;
+}
+
+#close {
+  width: 50px;
+  position: absolute;
+  top: 35px;
+  right: 500px;
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.589);
+}
+
+.card {
+  width: 500px;
+  background: white;
+  padding: 20px;
+  margin: 300px auto;
+}
+
+.nuevaTarea {
+  padding: 10px 10px;
+  display: flex;
+  width: 95%;
+  margin: 20px auto;
+}
+
+.agregar {
+  border: none;
+  background: rgb(0, 162, 255);
   color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  width: 65%;
+  margin: auto;
+  justify-content: center;
+  padding: 10px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.agregar:hover {
+  background: rgb(1, 109, 172);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.invalida {
+  background: rgb(255, 153, 153);
+  color: rgb(109, 0, 0);
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.opciones {
+  width: 40px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 390px) {
+  .header {
+    margin-top: 0;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .listado {
+    width: 95%;
+  }
+
+  #add {
+    top: 15px;
+    right: 12px;
+  }
+  #close {
+    top: 15px;
+    right: 12px;
+  }
+
+  .card {
+    width: 85%;
   }
 }
