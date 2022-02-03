@@ -24,7 +24,7 @@ body {
 .tarea {
   background: rgb(247, 251, 255);
   padding: 20px 10px 20px 20px;
-  margin: 10px 20px;
+  margin: 10px 10px;
   display: flex;
   box-shadow: 2px 2px 2px #ccc;
   justify-content: space-between;
@@ -97,7 +97,7 @@ body {
 }
 
 .invalida {
-  background: rgb(255, 153, 153);
+  background: rgb(255, 166, 166);
   color: rgb(109, 0, 0);
   padding: 10px 0;
   text-align: center;
@@ -110,6 +110,10 @@ body {
   cursor: pointer;
 }
 
+.completado {
+  text-decoration: line-through;
+}
+
 @media screen and (max-width: 390px) {
   .header {
     margin-top: 0;
@@ -117,7 +121,12 @@ body {
   }
 
   .listado {
-    width: 95%;
+    width: 100%;
+  }
+
+  .tarea {
+    padding: 5px 0px 5px 5px;
+    margin: 5px;
   }
 
   #add {

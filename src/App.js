@@ -8,17 +8,26 @@ import "./App.css";
 function App() {
   const [modal, setModal] = useState(false);
   const [tareas, setTareas] = useState([]);
+  const [tareaEditar, setTareaEditar] = useState({});
 
   useEffect(() => {
-    
-  }, [tareas]);
+    if (Object.keys(tareaEditar).length > 0) {
+      setModal(true);
+    }
+  }, [tareaEditar]);
 
   return (
     <div>
       <Header setModal={setModal} />
-      <ListaTareas tareas={tareas} />
+      <ListaTareas tareas={tareas} setTareaEditar={setTareaEditar} />
       {modal ? (
-        <Modal setModal={setModal} tareas={tareas} setTareas={setTareas} />
+        <Modal
+          setModal={setModal}
+          tareas={tareas}
+          setTareas={setTareas}
+          tareaEditar={tareaEditar}
+          setTareaEditar={setTareaEditar}
+        />
       ) : null}
     </div>
   );
