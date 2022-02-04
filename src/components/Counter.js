@@ -1,4 +1,4 @@
-import useCounter from "./hooks/useCounter";
+import useCounter from "../hooks/useCounter";
 
 const Counter = () => {
   const [counter, aumentar, reset] = useCounter(0);
