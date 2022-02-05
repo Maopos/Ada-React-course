@@ -6,8 +6,6 @@ const Dogs = () => {
 
   const { data, error } = useSWR(url, fetcher);
 
- 
-
   console.log(data);
 
   return (
@@ -20,7 +18,7 @@ const Dogs = () => {
             {data[0].breeds.length > 0 ? (
               <div>
                 <p>
-                  <b>Name: </b>
+                  <b>Breed: </b>
                   {data[0].breeds[0].name}
                 </p>
                 <p>
@@ -36,11 +34,16 @@ const Dogs = () => {
                   {data[0].breeds[0].temperament}
                 </p>
               </div>
-            ) : null}
+            ) : (
+              <p>
+                <b>Breed: </b>
+                Por especificar
+              </p>
+            )}
           </div>
         </center>
       ) : (
-        <p>{error}</p>
+        <h2>Loading...</h2>
       )}
     </div>
   );
