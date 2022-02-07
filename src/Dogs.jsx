@@ -6,7 +6,7 @@ const Dogs = () => {
 
   const { data, error } = useSWR(url, fetcher);
 
-  console.log(data);
+  if (error) return <div>failed to load</div>
 
   return (
     <div>
@@ -40,6 +40,7 @@ const Dogs = () => {
                 Por especificar
               </p>
             )}
+            <button type="submit" onClick={() => window.location.reload()}>Siguiente</button>
           </div>
         </center>
       ) : (
