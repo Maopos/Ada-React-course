@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Formulario = () => {
   const [datos, setDatos] = useState({
     nombre: "",
     apellido: "",
   });
+
+  const [enviado, setEnviado] = useState(false);
+
+  useEffect(() => {
+    if (enviado === true) {
+      console.log("Enviado");
+    }
+    setEnviado(false);
+  }, [enviado]);
 
   const handleInputs = (e) => {
     setDatos({
@@ -21,7 +30,8 @@ const Formulario = () => {
       return;
     }
 
-    console.log(datos.nombre, datos.apellido);
+    //console.log(datos.nombre, datos.apellido);
+    setEnviado(true);
   };
 
   return (
