@@ -61,6 +61,7 @@ const Formulario = () => {
           <button>Enviar</button>
         </form>
       </center>
+      <hr />
     </div>
   );
 };
